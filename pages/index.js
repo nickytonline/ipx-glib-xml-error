@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
@@ -12,9 +12,22 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Image src="https://owa-lb-test.thenational.academy/images/illustrations/teacher-carrying-stuff-237-286.png" width={1920} height={300} alt="png"/>
+        <p>Image that should give a 500</p>
+        <Image
+          src="https://owa-lb-test.thenational.academy/images/illustrations/teacher-carrying-stuff-237-286.png"
+          width={1920}
+          height={300}
+          alt="local image that should render"
+        />
 
-        </main>
+        <p>Local image that should render</p>
+        <Image
+          src="/images/teacher-carrying-stuff-237-286.png"
+          width={1920}
+          height={300}
+          alt="png"
+        />
+      </main>
     </div>
-  )
+  );
 }
